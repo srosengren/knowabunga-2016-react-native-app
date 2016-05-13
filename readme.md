@@ -1,6 +1,5 @@
 
 * Yes, native
-* Faster development, save a file and it's in the emulator
 * Yes, JSX
 * Flexbox
 * Learn once, write anywhere
@@ -15,3 +14,4 @@ react-native run-{ios|android}
 ````
 ws://knowabunga-2016-react-native.azurewebsites.net
 {type: 'message',content:'stuff',username: 'me'}
+```
