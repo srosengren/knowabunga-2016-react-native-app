@@ -7,7 +7,7 @@ import {
 export default (item) => ({
     message: (
         <View>
-            <Text style={{fontSize: 12,fontStyle:'italic'}}>{item.username}</Text>
+            <Text style={{fontSize: 12,fontStyle:'italic'}}>{item.username + ' ' + item.timestamp}</Text>
             <Text>{item.content}</Text>
         </View>
     )

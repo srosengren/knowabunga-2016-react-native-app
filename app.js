@@ -28,18 +28,20 @@ export default class App extends Component {
   }
   componentDidMount(){
       ws.onmessage = e => {
-          const received = this.state.received.concat([JSON.parse(JSON.parse(e.data))]); 
+          const received = this.state.received.concat([{...JSON.parse(JSON.parse(e.data)),timestamp: new Date()}]); 
           this.setState({
               received: received,
           });
       }
   }
   render() {
+      var items = [].concat(this.state.received);
+      items.reverse();
     return (
       <View style={styles.container}>
         <StatusBar hidden={true} />
         <View style={styles.messages}>
-            <ItemsView items={this.state.received} 
+            <ItemsView items={items} 
                        renderRow={Received} 
                        enableEmptySections={true} />
         </View>
